@@ -1,0 +1,320 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background-color: rgba(248, 249, 255, 0.927);
+  min-width: 500px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.main-pages {
+  position: relative;
+  padding-top: 20px;
+  padding-left: 50px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* styles for buttons  */
+
+.main-buttons {
+  background-color: #000000;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(315deg, rgba(0, 0, 0, 1) 8%, rgba(215, 215, 215, 1) 32%, rgba(255, 255, 255, 1) 70%);
+  border-width: 0.5px;
+  color: rgb(97, 8, 8);
+  font-weight: bold;
+  height: 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+}
+
+.buttons {
+  background-color: white;
+  border-color: rgb(68, 62, 62);
+  border-width: 0.5px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  width: 120px;
+}
+
+.animation-buttons {
+  background: rgb(247, 230, 230);
+  background: radial-gradient(circle, rgba(247, 230, 230, 1) 55%, rgba(96, 6, 6, 1) 78%, rgba(25, 1, 1, 1) 100%);
+  border-radius: 50%;
+  color: rgb(97, 8, 8);
+  font-weight: bold;
+  height: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  width: 25px;
+  margin-top: 5px;
+}
+
+#reset, #generate-cars, .stop, #next {
+  margin-left: 5px;
+}
+
+.buttons:disabled, input:disabled {
+  border-color: rgb(218, 201, 201);
+  color: rgb(128, 119, 119);
+  background: rgb(200, 200, 200);
+  background: linear-gradient(4deg, rgba(200, 200, 200, 1) 3%, rgba(242, 245, 246, 1) 100%);
+}
+
+.main-buttons:active, .main-buttons:hover {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(315deg, rgba(0, 0, 0, 1) 8%, rgba(255, 253, 48, 1) 32%, rgba(255, 255, 255, 1) 70%);
+}
+
+.buttons:active, .buttons:hover:not([disabled]) {
+  background: rgb(247, 230, 230);
+  background: linear-gradient(315deg, rgb(245, 247, 230) 39%, rgba(217, 228, 21, 0.8715861344537815) 71%, rgba(25, 1, 1, 1) 100%);
+  transition-duration: .5s;
+}
+
+.animation-buttons:hover:not([disabled]) {
+  background: rgb(247, 230, 230);
+  background: radial-gradient(circle, rgb(248, 246, 246) 55%, rgb(246, 250, 17) 78%, rgba(25, 1, 1, 1) 100%);
+}
+
+.animation-buttons:disabled {
+  background: rgb(247, 230, 230);
+  background: radial-gradient(circle, rgb(139, 131, 131) 55%, rgb(39, 29, 29) 78%, rgba(25, 1, 1, 1) 100%);
+}
+
+:active, :hover, :focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+/* styles for images */
+
+.racing {
+  position: absolute;
+  padding-left: 35%;
+  top: 140px;
+  min-width: 300px;
+  width: 40%;
+  height: 30%;
+  z-index: 2;
+  min-height: 200px;
+}
+
+.racing img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.colorful-car {
+  margin-left: 2%;
+  width: 100px;
+  height: 40px;
+  overflow: hidden;
+  -webkit-mask: url('img/car.svg') no-repeat center;
+  mask: url('img/car.svg') no-repeat center;
+  transform: scaleX(-1);
+}
+
+.race-road {
+  position: relative;
+  margin-top: 20px;
+  height: 40px;
+  background-image: url("img/race.png");
+  background-size: contain;
+}
+
+.race-road-down {
+  transform: rotate(180deg);
+}
+
+.flag {
+  position: absolute;
+  margin-left: 80%;
+  margin-top: -45px;
+  width: 30px;
+  overflow: hidden;
+}
+
+.flag img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.win {
+  height: 100%;
+  padding-top: 14.5%;
+}
+
+.win img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Garage Page */
+
+.garage-settings {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  z-index: 3;
+}
+
+.form-input {
+  width: 220px;
+}
+
+.input-div, .car-garage {
+  display: flex;
+  justify-content: baseline;
+  gap: 10px;
+}
+
+.car-garage p {
+  margin: 0px;
+  font-weight: bold;
+}
+
+.line {
+  border-top: 1px dashed green;
+  height: 4px;
+}
+
+h2 {
+  position: relative;
+  padding-left: 50px;
+}
+
+.congratulation-popup-container h2 {
+  padding-left: 0px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.congratulation-popup-container p {
+  margin: 0;
+  padding-top: 10px;
+}
+
+.garage-wrapper h2 {
+  margin-top: 40px;
+}
+
+.winner-page h2 {
+  padding-top: 20px;
+}
+
+h3 {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 50px;
+}
+
+.garage {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 5px;
+  z-index: 3;
+}
+
+.garage-management {
+  position: relative;
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-bottom: 20px;
+}
+
+/* Congratulation Popup */
+
+.congratulation-popup-container {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7847514005602241) 8%, rgba(255, 253, 48, 0.2329306722689075) 32%, rgba(255, 255, 255, 0.9164040616246498) 70%);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+/* styles for footer */
+
+footer {
+  border-top: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #38495a, #a2abb3, #38495a);
+  background-color: #313940;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github {
+  display: block;
+  width: 120px;
+  height: 45px;
+  padding-left: 45px;
+  background-image: url('img/github.svg');
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  line-height: 45px;
+  color: #cbd5de;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.3s;
+}
+
+.github:hover {
+  color: #fff;
+}
+
+.rss {
+  display: block;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  width: 86px;
+  height: 32px;
+  background-image: url('img/rss.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-right: 70px;
+}
+
+.rss-year {
+  position: absolute;
+  bottom: 0;
+  margin-left: 90px;
+  font-size: 21px;
+  letter-spacing: -2px;
+  color: #cbd5de;
+  line-height: 0.9;
+  font-weight: bold;
+  transition: 0.3s;
+}
